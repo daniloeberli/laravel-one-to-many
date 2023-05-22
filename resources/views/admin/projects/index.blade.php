@@ -10,7 +10,7 @@
     <a href="{{route('admin.projects.create')}}" class="btn btn-primary btn-sm ms-2">Create new project</a>
     <div class="row">
         @foreach ($projects as $project)
-            <div class="col">
+            <div class="col col-sm-12 col-lg-4">
                 <div class="card">
                     <div class="card-body">
                       <h5 class="card-title"> @if ($project->image) <a href="#" class="btn btn-sm btn-success">Image </a>
