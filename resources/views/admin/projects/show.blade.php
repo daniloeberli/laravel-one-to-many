@@ -11,6 +11,9 @@
     <div class="card">
         <img class="card-img-top" src="{{ asset('storage/' . $project->image) }}" alt="{{$project->title}}">
         <div class="card-body">
+          @if ($project->type_id)
+              <p>Type: {{$project->type->name}}</p>
+          @endif  
           <p class="card-text">{{$project->stack}}</p>
           <p class="card-text">{{$project->description}}</p>
           <a href="{{route('admin.projects.edit', $project)}}" class="btn btn-warning">Edit</a>
